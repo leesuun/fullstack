@@ -1,0 +1,27 @@
+/*  screens */
+@import "./screen/loginFail.css";
+@import "./screen/loginSuccess.css";
+@import "./screen/loginInput.css";
+
+/*  components */
+@import "./components/footer.css";
+@import "./components/header.css";
+
+.wrapper {
+  height: 100vh;
+}
+
+.main-img {
+  height: 700px;
+  width: 100%;
+}
+
+.login-error__msg {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}

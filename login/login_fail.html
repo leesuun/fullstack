@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로그인 화면</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper input">
+      <header class="page-header">
+        <a href="index.html">
+          <img class="logo" src="img/company.png" alt="로고 없음" />
+        </a>
+        <h1 class="title">낙원 여행사</h1>
+        <a href="login_input.html">
+          <button>LogIn</button>
+        </a>
+      </header>
+      <main class="login-main">
+        <h2>로그인 페이지</h2>
+        <form class="login-form">
+          <input type="email" placeholder="email.." />
+          <input type="password" placeholder="password" />
+          <span class="login-error__msg">로그인 정보가 잘못 되었습니다.</span>
+          <a href="login_success.html">
+            <input type="submit" value="Log Success" />
+          </a>
+          <a href="login_fail.html">
+            <input type="submit" value="Log Fail" />
+          </a>
+        </form>
+        <div class="social-login">
+          <img src="./img/gitImg.png" alt="" />
+          <img src="./img/naverImg.png" alt="" />
+          <img src="./img/kakaoImg.png" alt="" />
+        </div>
+        <br />
+        <hr class="line" />
+        <br />
+        <div class="login-option">
+          <a href="#">
+            <span>아이디,비밀번호 찾기</span>
+          </a>
+          <a href="#">
+            <span>회원가입</span>
+          </a>
+        </div>
+      </main>
+      <footer>개발팀, 저작권자 표시</footer>
+    </div>
+  </body>
+</html>
