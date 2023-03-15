@@ -35,8 +35,9 @@
   border-bottom: 1px solid black;
 }
 
-.login-main input[type="submit"] {
+.login-main input[type="button"] {
   border: none;
+  cursor: pointer;
   background-color: greenyellow;
   border-radius: 10px;
 }
