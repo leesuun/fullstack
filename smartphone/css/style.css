@@ -2,10 +2,6 @@
   margin: 0;
 }
 
-body {
-  /* background-color: rgb(210, 181, 225); */
-}
-
 header {
   background-color: yellow;
   padding-bottom: 3rem;
@@ -24,6 +20,7 @@ aside {
   background-color: orange;
   float: left;
   width: 250px;
+
   height: 700px;
 }
 
