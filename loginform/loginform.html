@@ -2,9 +2,38 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/styles.css" />
     <title>로그인 폼</title>
+    <style>
+      fieldset {
+        width: 330px;
+      }
+
+      fieldset div {
+        padding: 10px 0px;
+      }
+      input[type="email"] {
+        margin-left: 16px;
+      }
+
+      input {
+        width: 110px;
+        transition: all 0.2s linear;
+        padding: 5px;
+      }
+      input:hover {
+        width: 150px;
+      }
+      input:focus {
+        background-color: antiquewhite;
+        border-radius: 10px;
+        scale: 1.1;
+      }
+      button {
+        margin-left: 20px;
+      }
+    </style>
   </head>
+
   <body>
     <fieldset>
       <h2>로그인 폼</h2>
@@ -13,14 +42,15 @@
         <legend>로그인</legend>
         <div>
           <label>
-            아이디 <input type="email" placeholder="이메일 형식 입력" />
-            <input type="submit" value="로그인" />
+            <span>아이디</span>
+            <input type="email" placeholder="이메일 형식 입력" />
+            <button>로그인</button>
           </label>
         </div>
         <div>
           <label>
-            비밀번호 <input type="password" />
-            <input type="reset" value="취소" />
+            <span>비밀번호</span> <input type="password" />
+            <button>취소</button>
           </label>
         </div>
       </fieldset>

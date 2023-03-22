@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/survey.css" />
+    <title>설문조사</title>
+  </head>
+  <body>
+    <header>
+      <h1>설문지</h1>
+      <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+    </header>
+
+    <main>
+      <div>
+        <span>연령대</span>
+        <label><input name="age-group" type="radio" />10대</label>
+        <label><input name="age-group" type="radio" />20대</label>
+        <label><input name="age-group" type="radio" />30대</label>
+        <label><input name="age-group" type="radio" />40대 이상</label>
+      </div>
+      <div>
+        <span>성별</span>
+        <label><input name="gender" type="radio" />남</label>
+        <label><input name="gender" type="radio" />여</label>
+      </div>
+      <div>
+        <span>관심 분야</span>
+        <select name="" id="">
+          <option value="웹 서비스" selected>웹 서비스</option>
+          <option value="앱 서비스">앱 서비스</option>
+          <option value="임베디드 서비스">임베디드 서비스</option>
+          <option value="인공지능 서비스">인공지능 서비스</option>
+        </select>
+      </div>
+      <div>
+        <span>진로</span>
+        <label><input name="course" type="radio" />개발</label>
+        <label><input name="course" type="radio" />기획</label>
+        <label><input name="course" type="radio" />영업</label>
+        <label><input name="course" type="radio" />창업</label>
+      </div>
+      <div>
+        <span>남기고 싶은 말</span>
+        <textarea
+          name=""
+          id=""
+          cols="50"
+          rows="10"
+          placeholder="글을 남겨주세요."
+        ></textarea>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright 2022 by LSU</p>
+    </footer>
+  </body>
+</html>
