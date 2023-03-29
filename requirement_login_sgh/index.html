@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>login_input.html#</title>
+    <style>
+      body {
+        background-color: #131921;
+        color: white;
+      }
+
+      body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        border-bottom: 1px solid white;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrapper {
+        margin: 0 auto;
+        padding-top: 50px;
+        width: 500px;
+        height: 1000px;
+        text-align: center;
+      }
+
+      .login-form {
+        margin-top: 25px;
+      }
+      .form-label__img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .input-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 25px;
+      }
+
+      .input-box button {
+        height: 65px;
+        width: 145px;
+        margin-bottom: 7px;
+        background-color: #ff9900;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .login-box div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .login-box input {
+        background-color: #131921;
+        width: 170px;
+        height: 20px;
+        padding: 3px;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+      }
+
+      .login-box input:focus {
+        border: none;
+        outline: 2px solid #ff9900;
+      }
+
+      .login-option {
+        margin-top: 20px;
+      }
+
+      .social-list {
+        margin-top: 40px;
+        padding: 0;
+      }
+
+      .social-list li {
+        display: flex;
+        padding: 15px 10px;
+        align-items: center;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 10px;
+        gap: 150px;
+      }
+
+      .social-list a:nth-child(1) li:hover {
+        border-image: linear-gradient(to left, white, #131921);
+        border-image-slice: 1;
+      }
+      .social-list a:nth-child(2) li:hover {
+        border-image: linear-gradient(to right, #f9e000, #131921);
+        border-image-slice: 1;
+      }
+      .social-list a:nth-child(3) li:hover {
+        border-image: linear-gradient(to left, #334c8c, #131921);
+        border-image-slice: 1;
+      }
+      .social-list a:nth-child(4) li:hover {
+        border-image: linear-gradient(to right, #2db400, #131921);
+        border-image-slice: 1;
+      }
+
+      .social-list img {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+      }
+
+      .social-list span {
+        /* margin-right: 80px; */
+        text-align: center;
+      }
+
+      footer {
+        margin-top: 70px;
+        font-size: 13px;
+      }
+
+      .license {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .license img {
+        width: 70px;
+        margin-right: 10px;
+      }
+      .license p {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="M000001S" style="border: none">
+        <img src="images/ARTMU.png" alt="로고" id="logo" />
+      </a>
+      <hr />
+
+      <form class="login-form">
+        <fieldset>
+          <legend><span>로 그 인</span></legend>
+
+          <div class="input-box">
+            <div class="login-box">
+              <div>
+                <img class="form-label__img" src="images/user-icon.png" />
+                <input type="text" id="id" placeholder="아이디" />
+              </div>
+              <div>
+                <img class="form-label__img" src="images/pw-icon.png" />
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="비밀번호"
+                  minlength="8"
+                />
+              </div>
+            </div>
+            <button type="submit" id="submit-btn">로그인</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <div class="login-option">
+        <a href="#">
+          <span>회원가입</span>
+        </a>
+        <span>|</span>
+        <a href="#">
+          <span>아이디 찾기</span>
+        </a>
+        <span>|</span>
+        <a href="#">
+          <span>비밀번호 찾기</span>
+        </a>
+      </div>
+
+      <ul class="social-list">
+        <a href="SI000311P.html">
+          <li>
+            <img src="images/google.png" alt="" /><span>구글 계정 로그인</span>
+          </li>
+        </a>
+        <a href="SI000111P.html">
+          <li>
+            <img src="images/kakao.png" alt="" /><span>카카오 계정 로그인</span>
+          </li>
+        </a>
+        <a href="SI000411P.html">
+          <li>
+            <img src="images/facebook.png" alt="" /><span
+              >페이스북 계정 로그인</span
+            >
+          </li>
+        </a>
+        <a href="SI000211P.html">
+          <li>
+            <img src="images/naver.png" alt="" /><span>네이버 계정 로그인</span>
+          </li>
+        </a>
+      </ul>
+
+      <footer>
+        <div class="policy">
+          <a href="#">
+            <span>이용약관</span>
+          </a>
+          <span> |</span>
+          <a href="#">
+            <span>개인정보처리방침</span>
+          </a>
+          <span> |</span>
+          <a href="#">
+            <span>책임의 한계와 법적고지</span>
+          </a>
+          <span>|</span>
+          <a href="#">
+            <span>회원정보 고객센터</span>
+          </a>
+        </div>
+        <div class="license">
+          <a href="M000001S.html">
+            <img src="images/ARTMU.png" alt="" />
+          </a>
+          <p>Copyright © SongGeunHo. All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const loginForm = document.querySelector(".login-form");
+      const inputId = document.getElementById("id");
+      const inputPassword = document.getElementById("password");
+
+      function onSubmitForm(e) {
+        e.preventDefault();
+
+        const regex = new RegExp(
+          /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g
+        );
+
+        if (regex.test(inputId.value)) {
+          alert("특수문자 사용불가");
+        } else if (inputPassword.value.length < 8) {
+          alert("비밀번호를 8자리 이상입력하세요");
+        } else {
+          alert("로그인 성공");
+        }
+
+        // console.log(e);
+        // console.log(inputId.value);
+      }
+
+      loginForm.addEventListener("submit", onSubmitForm);
+    </script>
+  </body>
+</html>
