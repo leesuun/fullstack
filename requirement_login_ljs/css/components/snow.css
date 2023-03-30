@@ -1,0 +1,76 @@
+.snow-container {
+  position: absolute;
+  height: 1000px;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -5;
+  pointer-events: none;
+  background-color: black;
+}
+
+.snow {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-animation: snow linear infinite;
+  animation: snow linear infinite;
+}
+.snow.foreground {
+  background-image: url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");
+  -webkit-animation-duration: 15s;
+  animation-duration: 15s;
+}
+.snow.foreground.layered {
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+}
+.snow.middleground {
+  background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+.snow.middleground.layered {
+  -webkit-animation-delay: 50s;
+  animation-delay: 50s;
+}
+.snow.background {
+  background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+.snow.background.layered {
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+}
+
+@-webkit-keyframes snow {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(80%);
+    transform: translateX(80%);
+  }
+}
+
+@keyframes snow {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}

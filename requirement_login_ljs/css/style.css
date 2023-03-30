@@ -1,0 +1,111 @@
+@import url(components/snow.css);
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  border-bottom: 1px solid white;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid red;
+  padding: 2rem;
+  box-shadow: 3px 3px 3px 3px red;
+}
+.logo {
+  width: 350px;
+  transition: all 2s ease-in;
+}
+
+/* .logo {
+  transform: translateX(-50px);
+} */
+
+.title {
+  font-size: 3rem;
+  color: rgb(36, 0, 167);
+  border-bottom: 5px solid white;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.login-form > button {
+  background-color: crimson;
+  color: rgb(149, 182, 3);
+  margin-top: 1rem;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.login-form input,
+.social-login button {
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+}
+
+.login-form input {
+  box-shadow: 1px 1px 2px 1px black;
+}
+
+.social-login {
+  margin-top: 1rem;
+}
+
+.social-login button {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+
+.social-login button:nth-child(1):hover,
+.social-login button:nth-child(3):hover,
+.social-login button:nth-child(5):hover,
+.social-login button:nth-child(7):hover {
+  opacity: 1;
+}
+
+.social-login button:nth-child(1) {
+  background-color: #5c95f0;
+}
+.social-login button:nth-child(3) {
+  background-color: yellow;
+}
+.social-login button:nth-child(5) {
+  background-color: greenyellow;
+}
+
+.social-login button:nth-child(7) {
+  background-color: darkgray;
+}
+
+.login-option {
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
