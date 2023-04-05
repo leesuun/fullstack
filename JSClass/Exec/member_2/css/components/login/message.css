@@ -1,0 +1,8 @@
+.message {
+  margin-top: 1.5rem;
+  color: grey;
+  font-size: 0.8rem;
+}
+.login-click {
+  cursor: pointer;
+}

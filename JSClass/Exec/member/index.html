@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>넷플릭스 로그인 화면</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="logo">NETFLIX</h1>
+      <div class="login-box">
+        <h1>로그인</h1>
+        <form class="login-form">
+          <input
+            id="emailId"
+            type="email"
+            placeholder="이메일 주소 "
+            minlength="8"
+            maxlength="16"
+          />
+          <input id="password" type="password" placeholder="비밀번호 " />
+          <input class="login-click" type="submit" value="로그인" />
+          <div class="login-option">
+            <label>
+              <input type="checkbox" class="login-checkbox" />
+              로그인 정보 저장
+            </label>
+            <a href="#">
+              <span>도움이 필요하신가요?</span>
+            </a>
+          </div>
+        </form>
+
+        <div class="social-login">
+          <div class="login-click">카카오톡으로 시작하기</div>
+          <div class="login-click">네이버 계정으로 시작하기</div>
+          <div class="login-click">깃허브 계정으로 시작하기</div>
+        </div>
+
+        <div class="message">
+          <span>Netflix 회원이 아닌가요? 지금 가입하세요.</span><br /><br />
+          <p>
+            이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을
+            확인합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

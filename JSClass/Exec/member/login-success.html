@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>넷플릭스 로그인 화면</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="logo">NETFLIX</h1>
+
+      <div class="login-box">
+        <h1>로그인 화면</h1>
+        <span id="success-email" style="display: block"></span>
+        <span id="success-nickname" style="display: block"></span>
+
+        <div class="login-success__other">
+          <button onclick="logout()">로그아웃</button>
+          <button onclick="showChangePassScreen()">비밀번호 변경</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/login-success.js"></script>
+  </body>
+</html>

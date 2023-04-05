@@ -1,0 +1,25 @@
+/* components */
+@import url("components/logo/logo.css");
+@import url("components/login/basic-login.css");
+@import url("components/login/social-login.css");
+@import url("components/login/message.css");
+@import url("components/login/login-success.css");
+@import url("components/login/pass-change.css");
+
+/* screens */
+@import url("screens/main.css");
+
+* {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+body {
+  color: white;
+}

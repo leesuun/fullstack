@@ -1,0 +1,23 @@
+.social-login {
+  margin-top: 3rem;
+}
+
+.social-login div {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.social-login div:nth-child(1) {
+  background-color: yellow;
+  color: black;
+}
+.social-login div:nth-child(2) {
+  background-color: #04cf5c;
+  color: white;
+}
+.social-login div:nth-child(3) {
+  background-color: grey;
+  color: white;
+}
