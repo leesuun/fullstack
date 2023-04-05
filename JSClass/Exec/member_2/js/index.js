@@ -24,7 +24,7 @@ function onSubmitForm(event) {
     sessionStorage.setItem("loggedInNickname", nickName);
     window.location.href = `login-success.html?${id},${password},${nickName}`;
   } else {
-    alert("없는 사용자 계정입니다.");
+    alert("사용자가 없거나 비밀번호가 틀립니다.");
   }
 }
 
