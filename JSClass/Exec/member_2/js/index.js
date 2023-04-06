@@ -2,16 +2,6 @@ const loginForm = document.querySelector(".login-form");
 const idInput = document.querySelector("#emailId");
 const passInput = document.querySelector("#password");
 
-// localStorage.clear();
-// localStorage.setItem(
-//   "customerInfo",
-//   JSON.stringify([
-//     ["dltndns@naver.co", "q123456@12", "시계"],
-//     ["007ask@naver.com", "qkfkadml@12", "김밥"],
-//     ["qqqqqq@naver.com", "qqqqqq@#12", "라면"],
-//   ])
-// );
-
 function onSubmitForm(event) {
   event.preventDefault();
   const id = idInput.value;

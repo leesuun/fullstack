@@ -14,6 +14,7 @@
         <h1>회원가입</h1>
         <form class="login-form" action="index.html">
           <input
+            required
             id="emailId"
             type="email"
             placeholder="이메일 주소"
@@ -21,17 +22,24 @@
             maxlength="16"
           />
           <div class="error email_error_msg"></div>
-          <input id="nickname" type="text" placeholder="닉네임" />
+          <input required id="nickname" type="text" placeholder="닉네임" />
+          <input
+            required
+            id="password"
+            type="password"
+            placeholder="비밀번호 "
+          />
 
-          <input id="password" type="password" placeholder="비밀번호 " />
           <div class="error password_error_msg"></div>
           <input
+            required
             id="password_confirm"
             type="password"
             placeholder="비밀번호 확인"
           />
           <div class="error passwordConfirm_error_msg"></div>
           <input
+            required
             id="phone"
             type="text"
             placeholder="핸드폰 번호(01x-xxxx-xxxx)"

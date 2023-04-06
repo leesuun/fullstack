@@ -1,19 +1,17 @@
-const emailIdInput = document.getElementById("emailId");
-const passwordInput = document.getElementById("password");
+const email = document.getElementById("emailId");
+const password = document.getElementById("password");
 const password_confirm = document.getElementById("password_confirm");
 const phone = document.getElementById("phone");
 const nickname = document.getElementById("nickname");
-
 const email_error_msg = document.querySelector(".email_error_msg");
 const password_error_msg = document.querySelector(".password_error_msg");
 const passwordConfirm_error_msg = document.querySelector(
   ".passwordConfirm_error_msg"
 );
 const phone_error_msg = document.querySelector(".phone_error_msg");
-
 const loginForm = document.querySelector(".login-form");
 
-emailIdInput.focus();
+email.focus();
 
 const regExp = {
   email: /[a-z0-9]+@[a-z]+.[a-z]{2,3}/,
@@ -39,83 +37,70 @@ const error = {
 let result = false;
 
 function onblurEmail() {
-  const email = emailIdInput.value;
   const regexID = new RegExp(regExp.email);
   const ID_MIN_LENGTH = 8;
   const ID_MAX_LENGTH = 16;
 
-  // 1
-  const emailValidation_1 = email.length !== 0;
-  result = validateInput(
-    emailValidation_1,
+  // 1 공백 체크
+  result = validate(
+    email.value.length !== 0,
     email_error_msg,
     error.email.blank_check
   );
   if (!result) {
-    return emailIdInput.focus();
+    return email.focus();
   }
 
-  // 2
-  const emailValidation_2 =
-    ID_MIN_LENGTH <= email.length && email.length <= ID_MAX_LENGTH;
-  result = validateInput(
-    emailValidation_2,
+  // 2 길이 체크
+  result = validate(
+    ID_MIN_LENGTH <= email.value.length && email.value.length <= ID_MAX_LENGTH,
     email_error_msg,
     error.email.length_check
   );
   if (!result) {
-    return emailIdInput.focus();
+    return email.focus();
   }
 
-  // 3
-  const emailValidation_3 = regexID.test(email);
-  result = validateInput(
-    emailValidation_3,
+  // 3 이메일 형식 체크
+  result = validate(
+    regexID.test(email.value),
     email_error_msg,
     error.email.emailForm_check
   );
   if (!result) {
-    return emailIdInput.focus();
+    return email.focus();
   }
 }
 
 function onblurPassword() {
-  const password = passwordInput.value;
   const regexPass = new RegExp(regExp.password);
 
-  const passwordValidation = regexPass.test(password);
-  result = validateInput(
-    passwordValidation,
+  result = validate(
+    regexPass.test(password.value),
     password_error_msg,
     error.password.passwordForm_check
   );
   if (!result) {
-    return passwordInput.focus();
+    return password.focus();
   }
 }
 
 function onblurPasswordConfirm() {
-  const password = passwordInput.value;
-  const passwordConfirm = password_confirm.value;
-
-  const passwordConfirmValidation = password === passwordConfirm;
-  result = validateInput(
-    passwordConfirmValidation,
+  result = validate(
+    password.value === password_confirm.value,
     passwordConfirm_error_msg,
     error.password.passwordConfirm_check
   );
   if (!result) {
-    return passwordInput.focus();
+    return password.focus();
   }
 }
 
 function onblurPhone() {
-  const phoneValue = phone.value;
   const regPhone = regExp.phone;
 
-  const phoneValidation = regPhone.test(phoneValue);
-  result = validateInput(
-    phoneValidation,
+  result = validate(
+    regPhone.test(phone.value),
     phone_error_msg,
     error.phone.phoneForm_check
   );
@@ -124,10 +109,9 @@ function onblurPhone() {
   }
 }
 
-function validateInput(verificationResult, errorElement, errorMsg) {
-  if (verificationResult) {
+function validate(testResult, errorElement, errorMsg) {
+  if (testResult) {
     errorElement.style.display = "none";
-    errorElement.innerText = "";
     return true;
   } else {
     errorElement.style.display = "block";
@@ -138,13 +122,10 @@ function validateInput(verificationResult, errorElement, errorMsg) {
 
 function onSubmitForm(event) {
   event.preventDefault();
-
   if (result) {
     const users = JSON.parse(localStorage.getItem("customerInfo")) || [];
-    users.push([emailIdInput.value, passwordInput.value, nickname.value]);
-    localStorage.clear();
+    users.push([email.value, password.value, nickname.value]);
     localStorage.setItem("customerInfo", JSON.stringify(users));
-
     alert("가입 성공");
     window.location.href = "index.html";
   } else {
@@ -152,7 +133,7 @@ function onSubmitForm(event) {
   }
 }
 
-emailId.addEventListener("blur", onblurEmail);
+email.addEventListener("blur", onblurEmail);
 password.addEventListener("blur", onblurPassword);
 password_confirm.addEventListener("blur", onblurPasswordConfirm);
 phone.addEventListener("blur", onblurPhone);
